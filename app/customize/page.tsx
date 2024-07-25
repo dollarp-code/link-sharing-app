@@ -1,12 +1,22 @@
 import Image from 'next/image';
 import Navbar from '../components/nav';
+import Link from 'next/link';
 
 const Customize = () => {
   return (
     <main className="bg-[#FAFAFA]">
       <Navbar />
-      <section className="p-4">
-        <div className="p-6 flex flex-col gap-10 bg-white">
+      <section className="p-4 md:flex gap-2">
+        <div className="md:w-[560px] md:p-12 bg-white flex items-center justify-center">
+          <Image
+            src={'/preview-section.svg'}
+            alt="phone"
+            width={307}
+            height={631}
+            className="hidden md:block"
+          />
+        </div>
+        <div className="p-6 flex flex-col gap-10 bg-white md:w-[808px]">
           <div className="flex flex-col gap-2">
             <h3 className="text-2xl font-bold text-[#333]">
               Customize your links
@@ -34,10 +44,12 @@ const Customize = () => {
               </div>
             </div>
           </div>
-          <div className="p-4  border-t">
-            <button className="px-[27px] py-[11px] bg-[#633CFF] rounded-lg hover:opacity-[25%] text-white w-full">
-              Save
-            </button>
+          <div className="p-4  border-t md:flex md:justify-end">
+            <Link href={'/profile'}>
+              <button className="px-[27px] py-[11px] bg-[#633CFF] rounded-lg hover:opacity-[25%] text-white w-full md:w-[91px]">
+                Save
+              </button>
+            </Link>
           </div>
         </div>
       </section>

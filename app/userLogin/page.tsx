@@ -67,12 +67,14 @@ const Login = () => {
               </div>
             </div>
           </div>
-          <button
-            type="submit"
-            className="block px-7 py-3 bg-[#633CFF] text-white rounded-lg"
-          >
-            Login
-          </button>
+          <Link href={'/customize'}>
+            <button
+              type="submit"
+              className="block px-7 py-3 bg-[#633CFF] text-white rounded-lg"
+            >
+              Login
+            </button>
+          </Link>
           <div className="text-center text-base font-normal text-[#737373]">
             <h5>Don&apos;t have an account?</h5>
             <Link href={'/userSignup'} className="text-[#633CFF]">
